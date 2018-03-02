@@ -17,8 +17,8 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
   def valid?
     if receiver.valid? && sender.valid?
       return true
-        end
     end
+  end
 
   def execute_transaction
     if sender.valid?
