@@ -6,12 +6,12 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
     @transfer = transfer
     @sender = sender
     @status = "pending"
-    @receiver = self
+    @receiver = receiver
     @amount = 50
   end
 
   def receiver
-    @receiver = transfer
+    @receiver = receiver
   end
 
   def valid?
