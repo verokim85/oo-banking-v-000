@@ -7,7 +7,7 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
     @sender = sender
     @status = "pending"
     @receiver = receiver
-    @amount = 50
+    # @amount = 50
   end
 
   def valid?
