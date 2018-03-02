@@ -30,8 +30,8 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
 
   def reverse_transfer
       if self.status == "completed"
-        sender.balance = balance + @amount
-        receiver.balance = balance - @amount
+        sender.balance = self.balance + @amount
+        receiver.balance = self.balance - @amount
         self.status = "reversed"
     end
   end
