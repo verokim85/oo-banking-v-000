@@ -17,15 +17,15 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
 
   def execute_transaction
     if self.status == "pending"
-      if sender.valid? && sender.balance > amount
+      if sender.valid? && sender.balance > @amount
           sender.balance = sender.balance - @amount
           receiver.balance = receiver.balance + @amount
           self.status = "complete"
         elsif self.valid? == false
            self.status = "rejected"
            return "Transaction rejected. Please check your account balance."
-        end
       end
+    end
   end
 
 
