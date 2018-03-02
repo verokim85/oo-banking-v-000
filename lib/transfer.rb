@@ -30,7 +30,7 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
 
   def reverse_transfer
       if self.status = "completed"
-    end 
+    end
   end
 
 
