@@ -10,10 +10,6 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
     @amount = 50
   end
 
-  def receiver
-    @receiver = receiver
-  end
-
   def valid?
     if receiver.valid? && sender.valid?
       return true
