@@ -14,7 +14,7 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
   #     return true
   #   end
   # end
-  # 
+  #
   # def execute_transaction
   #   if self.status == "pending"
   #     if sender.valid? && sender.balance > transfer
