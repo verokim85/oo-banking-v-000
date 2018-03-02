@@ -23,8 +23,8 @@ attr_accessor :transfer, :sender, :status, :receiver, :amount
   def execute_transaction
     if sender.valid?
 
-    sender.balance ||= sender.balance - @amount
-    receiver.balance ||= receiver.balance + @amount
+    sender.balance = sender.balance - @amount
+    receiver.balance = receiver.balance + @amount
     return self.status = "complete"
 
     elsif bad_transfer
